@@ -33,3 +33,16 @@ project = {
     }
   ]
 }
+#
+# cycle through first array
+# draw names from :commitee
+# distribute evenly through steps
+# 9 steps so 3 tasks each
+#
+# logic
+#
+# count steps
+# steps counted / 3
+# inject committee member
+p project[:committee].count
+p project[:steps].count
