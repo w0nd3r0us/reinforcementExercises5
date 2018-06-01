@@ -44,5 +44,19 @@ project = {
 # count steps
 # steps counted / 3
 # inject committee member
-p project[:committee].count
-p project[:steps].count
+# p project[:committee].count
+# p project[:steps].count
+# dont put into empty array put names into project[:steps] each
+p project
+p "--------"
+
+count = 0
+project[:steps].each do |step|
+  step[:person] = project[:committee][count]
+  count += 1
+  if count == 3
+    count = 0
+  end
+end
+# project[:steps][0][:person] = "TEST"
+p project
